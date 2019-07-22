@@ -1,5 +1,3 @@
-console.log('beginning of game.js');
-
 let simpleLevelPlan = `
 ......................
 ..#................#..
@@ -18,7 +16,6 @@ let simpleLevelPlan = `
 // ---------------------------------
 class Level {
   constructor(plan) {
-    console.log('inside Level constructor');
     let rows = plan.trim().split('\n').map(l => [...l])
 
     this.height = rows.length
@@ -59,7 +56,6 @@ class Level {
 // ---------------------------------
 class State {
   constructor(level, actors, status) {
-    console.log('inside State constructor');
     this.level = level
     this.actors = actors
     this.status = status
@@ -105,7 +101,6 @@ class State {
 // ---------------------------------
 class Vec {
   constructor(x, y) {
-    console.log('inside Vec constructor');
     this.x = x;
     this.y = y
   }
@@ -124,7 +119,6 @@ class Vec {
 // ---------------------------------
 class Player {
   constructor(pos, speed) {
-    console.log('inside Player constructor');
     this.pos = pos
     this.speed = speed
   }
@@ -174,7 +168,6 @@ Player.prototype.size = new Vec(0.7, 1.5)
 // ---------------------------------
 class Clock {
   constructor(pos, speed, reset) {
-    console.log('inside Clock constructor');
     this.pos = pos
     this.speed = speed
     this.reset = reset
@@ -257,7 +250,6 @@ class Coffee {
 // ---------------------------------
 class Computer {
   constructor(pos, basePos, wobble) {
-    console.log('inside Computer constructor');
     this.pos = pos
     this.basePos = basePos
     this.wobble = wobble
@@ -333,7 +325,6 @@ function elt(name, attrs, ...children) {
 // A display is created by giving it a parent element to which it should append itself and a level object.
 class DOMDisplay {
   constructor(parent, level) {
-    console.log('inside DOMDisplay constructor');
     this.dom = elt('div', { class: 'game' }, drawGrid(level))
     this.actorLayer = null
     parent.appendChild(this.dom)
@@ -387,7 +378,6 @@ let scale = 25
 // DRAW GRID
 // ---------------------------------
 function drawGrid(level) {
-  console.log('inside drawGrid function');
   return elt('table', {
     class: 'background',
     style: `width: ${level.width * scale}px`
@@ -496,4 +486,3 @@ async function runGame(plans, Display) {
   }
   document.getElementById("title").innerHTML = "Congrats, you get to graduate!"
 }
-console.log('end of file');
