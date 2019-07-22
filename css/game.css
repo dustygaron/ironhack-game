@@ -1,0 +1,76 @@
+body {
+  background: #2d354c;
+}
+
+.background {
+  background: url("/img/city-bg.jpg");
+  background-size: contain;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+.background td {
+  padding: 0;
+}
+
+.clock {
+  background-image: url("/img/clock.gif");
+  background-size: contain;
+}
+
+
+.coffee {
+  background-image: url("/img/spill-coffee.gif");
+  background-size: contain;
+}
+
+.wall {
+  background: #2d354c;
+  /* background-image: url("/img/block.gif");
+  background-size: contain; */
+}
+
+.actor {
+  position: absolute;
+}
+
+.computer {
+  background-image: url("/img/computer.png");
+  background-size: contain;
+}
+
+.player {
+  background-image: url("/img/girl.gif");
+  background-size: contain;
+}
+
+.game {
+  overflow: hidden;
+  max-width: 800px;
+  max-height: 650px;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid #2d354c;
+  border-radius: 5px;
+}
+
+.lost .player:after {
+  content: "GAME OVER!";
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  font-weight: 900;
+
+}
+
+.won .player {
+  box-shadow: -4px -7px 8px white,
+    4px -7px 8px white;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 46px;
+  color: white;
+  text-align: center;
+}
