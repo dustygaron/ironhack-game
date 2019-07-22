@@ -3,7 +3,7 @@ body {
 }
 
 .background {
-  background: url("/img/city-bg.jpg");
+  background: url("img/city-bg.jpg");
   background-size: contain;
   table-layout: fixed;
   border-spacing: 0;
@@ -14,19 +14,18 @@ body {
 }
 
 .clock {
-  background-image: url("/img/clock.gif");
+  background-image: url("img/clock.gif");
   background-size: contain;
 }
 
-
 .coffee {
-  background-image: url("/img/spill-coffee.gif");
+  background-image: url("img/spill-coffee.gif");
   background-size: contain;
 }
 
 .wall {
   background: #2d354c;
-  /* background-image: url("/img/block.gif");
+  /* background-image: url("img/block.gif");
   background-size: contain; */
 }
 
@@ -35,12 +34,12 @@ body {
 }
 
 .computer {
-  background-image: url("/img/computer.png");
+  background-image: url("img/computer.png");
   background-size: contain;
 }
 
 .player {
-  background-image: url("/img/girl.gif");
+  background-image: url("img/girl.gif");
   background-size: contain;
 }
 
@@ -57,19 +56,17 @@ body {
 .lost .player:after {
   content: "GAME OVER!";
   background: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000;
   font-weight: 900;
-
 }
 
 .won .player {
-  box-shadow: -4px -7px 8px white,
-    4px -7px 8px white;
+  box-shadow: -4px -7px 8px white, 4px -7px 8px white;
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 46px;
   color: white;
   text-align: center;
